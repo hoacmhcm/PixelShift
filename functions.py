@@ -12,7 +12,7 @@ def processImage(filename,operation):
 
         # Image Fromats
         case "cwebp":
-                imgProcessed = cv2.imwrite(f"static/uploads/{filename.split('.')[0]}.webp", img)
+                imgProcessed = cv2.imwrite(f"static/uploads/{filename.split('.')[0]}.webp", img, [int(cv2.IMWRITE_WEBP_QUALITY), 70])
                 return(f"{'_'.join(filename.split('.')[0:-1])}.webp")
         case "cpng":
                 imgProcessed = cv2.imwrite(f"static/uploads/{filename.split('.')[0]}.png", img)
